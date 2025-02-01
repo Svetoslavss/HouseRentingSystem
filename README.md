@@ -1,4 +1,4 @@
-<span style="color:blue">CI/CD Workflow for .NET Project</span>
+<span style="color:blue">CI/CD Workflow setting up .NET Project</span>
 o Setting up .NET Core
 
 o Restoring dependencies
