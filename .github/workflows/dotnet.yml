@@ -1,0 +1,27 @@
+name: CI/CD for .NET app
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build_test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone .NET repository on the runner
+      uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 9
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Run .NET Code Formatter
+      run: dotnet format --check
+    - name: Building the app
+      run: dotnet build 
+    - name: Running the tests
+      run: dotnet test
