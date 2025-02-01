@@ -1,2 +1,8 @@
-# HouseRentingSystem
- CI workflow with GitHub Actions to start and test the app
+<span style="color:blue">CI/CD Workflow for .NET Project</span>
+o Setting up .NET Core
+
+o Restoring dependencies
+
+o Building the app
+
+o Running the test
